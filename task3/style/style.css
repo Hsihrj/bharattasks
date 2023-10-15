@@ -1,0 +1,243 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.header{
+    background-image: url("../images/header-image.png");
+    height: 100vh;
+    border-bottom: 0.5em solid gray;
+}
+.nav {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 2em;
+}
+.logo {
+    width: 10em;
+}
+.btn {
+    background: red;
+    color: white;
+    border: 0.6em solid red;
+    border-radius: 0.5em;
+    width: 6em;
+}
+p{
+    font-size: 1.7em;
+}
+h1{
+    margin-top: 200px;
+    color: white;
+    text-align: center;
+    font-size: 3.5em;
+}
+.intro{
+    color: white;
+    text-align: center;
+    margin-top: 3vh;
+}
+.email{
+    width: 30%;
+    height: 10vh;
+    background: black;
+    border: 1px solid grey;
+}
+.start-btn{
+    width: 12%;
+    height: 10vh;
+    background: red;
+    color: white;
+    border: 1px solid red;
+    font-size: large;
+}
+.enjoy, .down-re{
+    background: black;
+    color: white;
+    align-items: center;
+    padding: 5em 10em 5em 10em;
+    display: flex;
+    border-bottom: 0.5em solid grey;
+}
+h2 {
+    font-size: 56px;
+}
+.enjoy div img, .down-re div img{
+    width: 100%;
+}
+.watch{
+    background: black;
+    color: white;
+    border-bottom: 0.5em solid grey;
+    padding: 5em 10em;
+}
+.watch h2, .watch p{
+    width: 45%;
+}
+.faq{
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 50px 12%;
+    border-bottom: 0.5em solid grey;
+}
+.faq h2{
+    text-transform: capitalize;
+}
+.faq h3{
+    font-size: 2em;
+    background: #2D2D2D;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: left;
+}
+.faq-list h3:hover{
+    background: grey;
+}
+.faq-list li{
+    list-style: none;
+    width: 100%;
+    padding: 5px;
+}
+.faq-list li label{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 2px;
+    cursor: pointer;
+    position: relative;
+    margin-bottom: -35px;
+}
+label::after{
+    content: '+';
+    font-size: 3em;
+    font-weight: bold;
+    position: absolute;
+    right: 40px;
+    transition: transform 0.5s;
+}
+input[type=checkbox]{
+    display: none;
+}
+.faq-list .para{
+    text-align: left;
+    padding: 0 20px;
+    background: #2D2D2D;
+    max-height: 0;
+    width: 91.6%;
+    margin: 0 auto;
+    overflow: hidden;
+    transition: max-height 0.5s, padding 0.5s;
+}
+.faq-list input[type=checkbox]:checked + label + .para{
+    max-height: 600px;
+    padding: 30px 20px;
+}
+.faq-list input[type=checkbox]:checked + label::after{
+    transform: rotate(135deg);
+}
+.small{
+    margin-top: 35px;
+}
+.footer{
+    padding: 50px 20% 10px;
+    border-top: 6px;
+    background: black;
+    color: #777;
+}
+.footer .row{
+    display: flex;
+    justify-content: space-between;
+}
+.footer a{
+    display: block;
+    color: #777;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+.lang-btn{
+    padding: 10px;
+    border: 1px solid white;
+    background: black;
+    color: white;
+    border-radius: 6px;
+}
+.lang-btn img{
+    width: 10%;
+}
+.footer > p{
+    color: #777;
+    font-size: 16px;
+    margin: 20px 0;
+}
+@media (max-width: 600px){
+    .logo{
+        width: 100px;
+    }
+    .nav{
+        margin-bottom: -100px;
+    }
+    .intro-log{
+        position: unset;
+        transform: none;
+    }
+    .intro-log h1{
+        font-size: 39px;
+    }
+    p{
+        font-size: 22px;
+    }
+    .email{
+        width: 80%;
+        height: 10vh;
+    }
+    .start-btn{
+        width: 50%;
+        margin-top: 15px;
+        height: 10vh;
+        border-radius: 5px;
+    }
+    .enjoy{
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+    h2{
+        font-size: 30px;
+    }
+    .down-re{
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 20px;
+    }
+    h2{
+        margin-top: 5px;
+    }
+    .watch{
+        padding: 20px;
+        text-align: center;
+    }
+    .watch h2, .watch p{
+        width: 100%;
+    }
+    .faq{
+        padding: 10px;
+    }
+    .faq h3{
+        font-size: 17px;
+    }
+    .faq ul .para{
+        width: 77%;
+        margin: 0 auto;
+    }
+    .faq p{
+        padding-top: 20px;
+    }
+    .small .start-btn{
+        margin-bottom: 20px;
+    }
+    .footer .row{
+        flex-direction: column;
+        padding: 0;
+    }
+}
